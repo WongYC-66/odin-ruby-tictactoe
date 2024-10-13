@@ -1,5 +1,5 @@
 # solution.rb
-require_relative "Game"
+require "./lib/Game"
 
 puts("Welcome to TicTacToe, how many rounds to play?")
 game_round = gets.to_i

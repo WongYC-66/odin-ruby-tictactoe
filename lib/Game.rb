@@ -4,13 +4,13 @@ require_relative 'Player'
 
 class Game
 
-  def initialize (round)
-    @board = Board.new
+  def initialize (round, board = Board.new, player1 = Player.new("Player_1", "O"), player2 = Player.new("Player_2", "X"))
+    @board = board
     @turn = true      # true = Player_1, # false = Player_2
     @max_round = round
     @curr_round = 1
-    @player1 = Player.new("Player_1", "O")
-    @player2 = Player.new("Player_2", "X")
+    @player1 = player1
+    @player2 = player2
   end
 
   def new_round
